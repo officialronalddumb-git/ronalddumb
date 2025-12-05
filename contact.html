@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Duda con Ronald Dumb</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="site-title">
+                <a href="index.html">DUMBLAND NEWS</a>
+            </h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                    <li><a href="about.html">Sobre Ronald Dumb</a></li>
+                    <li><a href="shop.html">Tienda</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="#" class="btn btn-donate">Donar Ahora</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <section class="page-header">
+            <h2>Contacta con la Administración de Dumbland</h2>
+            <p>¿Tienes preguntas? ¿Sugerencias (que probablemente serán ignoradas)? ¿Simplemente quieres alabar a nuestro presidente? ¡Estaremos encantados de no responderte inmediatamente!</p>
+        </section>
+
+        <section class="contact-section">
+            <div class="contact-form-container">
+                <h3>Envía tu Mensaje Oficial</h3>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Tu Nombre (o Nombre de Código)</label>
+                        <input type="text" id="name" name="name" required placeholder="Ej: Ciudadano Leal #7">
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Tu Email (si quieres que no te contactemos)</label>
+                        <input type="email" id="email" name="email" required placeholder="Ej: no@responder.com">
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Asunto (algo importante, pero no mucho)</label>
+                        <input type="text" id="subject" name="subject" required placeholder="Ej: Mi Idea Brillante (quizás)">
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tu Mensaje (recuerda ser breve y adulador)</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="¡Oh, Gran Presidente, su última decisión fue la más grande de todas!"></textarea>
+                        <small class="error-message"></small>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Enviar Mensaje (y esperar)</button>
+                </form>
+                <div id="formMessage" class="form-submission-message"></div>
+            </div>
+
+            <div class="contact-info-container">
+                <h3>Información de Contacto Extraoficial</h3>
+                <p><strong>Oficina Presidencial:</strong> Despacho Oval de Dumbland</p>
+                <p><strong>Dirección Secreta:</strong> Calle de las Verdades Alternativas, 1</p>
+                <p><strong>Teléfono Directo:</strong> 1-800-DUMBLND (solo en sueños)</p>
+                <p><strong>Email Principal:</strong> <a href="mailto:presidente@dumbland.gov">presidente@dumbland.gov</a> (revisado por la IA de la risa)</p>
+                <p><strong>Redes Sociales:</strong> Sigue a nuestro presidente en las plataformas más ruidosas.</p>
+                <div class="social-links">
+                    <a href="#" target="_blank">YouTube</a> |
+                    <a href="#" target="_blank">Twitter/X</a> |
+                    <a href="#" target="_blank">Facebook (del pasado)</a>
+                </div>
+                <div class="map-placeholder">
+                    <p>Ubicación de Dumbland: Tan real como algunas promesas electorales.</p>
+                    <img src="https://via.placeholder.com/400x250?text=MAPA+SECRETO+DE+DUMBLAND" alt="Mapa de Dumbland">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2023 Dumbland News. Todos los derechos reservados por la Presidencia de Ronald Dumb.</p>
+            <div class="social-links">
+                <a href="#" target="_blank">YouTube</a> |
+                <a href="#" target="_blank">Otras Plataformas de Video</a> |
+                <a href="#" target="_blank">Twitter/X</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="dist/app.js"></script>
+</body>
+</html>

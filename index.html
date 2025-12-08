@@ -6,25 +6,79 @@
     <title>Dumbland News - El Reportaje Más Verdadero por Ronald Dumb</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
     <header class="main-header">
-        <div class="container">
-            <h1 class="site-title">
-                <a href="index.html">DUMBLAND NEWS</a>
-            </h1>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="videos.html">Videos</a></li>
-                    <li><a href="about.html">Ronald Dumb</a></li>
-                    <li><a href="shop.html">Tienda</a></li>
-                    <li><a href="contact.html">Contacto</a></li> <!-- Nuevo enlace -->
-                    <li><a href="#" class="btn btn-donate">Donar Ahora</a></li>
-                </ul>
-            </nav>
+    <div class="container">
+        <h1 class="site-title">
+            <a href="index.html">DUMBLAND NEWS</a>
+        </h1>
+        <nav class="main-nav">
+            <ul>
+                <li>
+                    <a href="#" id="search-icon" aria-label="Buscar Noticias">
+                        <i class="fas fa-magnifying-glass"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://twitter.com/tu_cuenta_de_x" target="_blank" aria-label="X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/tu_canal_de_youtube" target="_blank" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://odysee.com/@tu_canal_de_odysee" target="_blank" aria-label="Odysee">
+                        <i class="fa-brands fa-odysee"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://vk.com/tu_pagina_de_vk" target="_blank" aria-label="VK">
+                        <i class="fa-brands fa-vk"></i>
+                    </a>
+                </li>
+                <li>
+                    <div class="language-selector">
+                        <select id="language-select" aria-label="Selector de Idioma">
+                            <option value="es" selected>Español</option>
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="about.html">Ronald Dumb</a></li>
+                <li><a href="shop.html">Tienda</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="#" class="btn btn-donate">Donar Ahora</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="search-bar-wrapper" class="header-actions hidden">
+        <div class="container action-elements">
+            <form id="search-form" class="search-form">
+                <input type="text" id="search-input" placeholder="Buscar Noticias Falsas..." aria-label="Buscar Noticias Falsas">
+                <button type="submit" aria-label="Buscar"><i class="fas fa-search"></i></button>
+            </form>
         </div>
-    </header>
+    </div>
+</header>
+
+
 
     <main class="container main-content">
         <section class="hero-article">
@@ -115,6 +169,6 @@
         </div>
     </footer>
 
-    <script src="dist/app.js"></script>
+    <script type="module" src="dist/app.js"></script>
 </body>
 </html>

@@ -743,6 +743,22 @@ a:hover {
     border-radius: 5px;
 }
 
+.main-nav i {
+  font-size: 22px;
+  transition: color .2s ease;
+}
+
+/* Colores oficiales */
+.fa-x-twitter { color: #000000; }
+.fa-youtube { color: #FF0000; }
+.fa-circle-play { color: #E93A3A; } /* Odysee (simulado) */
+.fa-vk { color: #0077FF; }
+
+/* Hover */
+.main-nav a:hover i {
+  color: #555; /* o un tono más claro/oscuro */
+}
+
 
 /* Media Queries para Responsividad de nuevas secciones */
 @media (max-width: 900px) {
@@ -785,5 +801,105 @@ a:hover {
         padding: 20px;
         min-width: unset;
         width: 100%;
+    }
+}
+
+/* --- CLASE DE VISIBILIDAD CONTROLADA POR JS/TS --- */
+
+/* Oculta la barra de búsqueda por defecto */
+.header-actions.hidden {
+    /* Mantiene el elemento invisible */
+    display: none !important; 
+}
+
+/* --- ESTILOS DE LA BARRA DE BÚSQUEDA Y SELECTOR DE IDIOMA --- */
+
+.header-actions {
+    background-color: #f8f8f8; 
+    border-bottom: 2px solid var(--accent-green);
+    padding: 10px 0;
+    /* 💥 ESTE ES EL CAMBIO CLAVE: Usa !important para forzar que se muestre */
+    display: flex !important; 
+    justify-content: center; /* Centra el contenido horizontalmente */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+/* El resto de los estilos que definiste son correctos: */
+.action-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* Igual al ancho del .container principal */
+}
+
+.search-form {
+    display: flex;
+    flex-grow: 1; 
+    max-width: 600px;
+}
+
+#search-input {
+    padding: 10px 15px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 5px 0 0 5px;
+    font-size: 1em;
+    flex-grow: 1;
+    transition: border-color 0.3s ease;
+}
+
+#search-input:focus {
+    border-color: var(--accent-green);
+    outline: none;
+}
+
+.search-form button {
+    background-color: var(--accent-green);
+    color: var(--white);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #226E43; /* Un verde más oscuro al pasar el mouse */
+}
+
+.language-selector select {
+    padding: 10px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--dark-text);
+}
+
+/* Estilo para el ícono de la lupa en el menú de la cabecera */
+.main-nav .fa-magnifying-glass {
+    color: var(--white); /* Color blanco para que se vea en el fondo azul */
+}
+
+/* Hover para el ícono de la lupa */
+.main-nav #search-icon:hover .fa-magnifying-glass {
+    color: var(--accent-green);
+}
+
+/* Media Query para responsividad en la barra de búsqueda */
+@media (max-width: 600px) {
+    .action-elements {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .search-form {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    .language-selector {
+        align-self: flex-start; /* Alinea a la izquierda en móvil */
     }
 }

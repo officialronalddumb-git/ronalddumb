@@ -1,0 +1,105 @@
+/* ================================
+   Barra lateral y layout principal
+   Archivo: css/sidebar.css
+   ================================ */
+
+/* Layout con barra lateral */
+.main-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* asegura que se alineen arriba */
+}
+
+.main-content {
+    flex: 1;
+    margin-right: 30px; /* espacio entre contenido y sidebar */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: 5px;
+    padding: 30px 20px;
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 300px;
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-left: 3px solid var(--accent-green);
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+
+    /* Sticky effect */
+    position: sticky;
+    top: 20px; /* distancia desde el top al hacer scroll */
+    align-self: flex-start; /* asegura que se alinee arriba */
+}
+
+/* Títulos dentro de la barra lateral */
+.sidebar h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.6em;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--accent-green);
+    padding-bottom: 8px;
+}
+
+/* Artículos dentro de la barra lateral */
+.sidebar article {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed var(--medium-gray);
+}
+
+.sidebar article:last-child {
+    border-bottom: none;
+}
+
+.sidebar article h3 {
+    font-size: 1.1em;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    font-family: 'Merriweather', serif;
+}
+
+.sidebar article h3 a {
+    color: var(--dark-text);
+    transition: color 0.3s ease;
+}
+
+.sidebar article h3 a:hover {
+    color: var(--accent-green);
+    text-decoration: underline;
+}
+
+.sidebar article p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Centrado y ancho máximo del layout */
+.container.main-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Separación entre secciones principales */
+.hero-article,
+.articles-grid,
+.latest-news {
+    margin-bottom: 40px;
+}
+
+/* Responsividad */
+@media (max-width: 992px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        margin-top: 30px;
+        border-left: none;
+        border-top: 3px solid var(--accent-green);
+    }
+}

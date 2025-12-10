@@ -36,8 +36,8 @@ a:hover {
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: 0 50px;
+    padding: 0 0px;
 }
 
 /* Header */
@@ -70,17 +70,19 @@ a:hover {
 
 .main-nav ul {
     list-style: none;
+    margin-left: 0px;
+    margin-right: -210px;
     display: flex;
     flex-wrap: wrap; /* Para envolver en pantallas pequeñas */
 }
 
 .main-nav li {
-    margin-left: 25px;
+    margin-left: 10px;
 }
 
 .main-nav a {
     color: var(--white);
-    font-weight: 700;
+    font-weight: 500;
     padding: 5px 0;
     display: block;
     transition: color 0.3s ease;
@@ -106,6 +108,9 @@ a:hover {
 
 /* Contenido Principal */
 .main-content {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: 5px;
     padding: 30px 20px;
 }
 
@@ -902,4 +907,156 @@ a:hover {
     .language-selector {
         align-self: flex-start; /* Alinea a la izquierda en móvil */
     }
+}
+
+.main-header {
+    position: relative; /* necesario para posicionar elementos absolutos dentro */
+}
+
+.clock-wrapper {
+    position: absolute;
+    bottom: 5px;   /* ajusta la distancia desde la parte inferior del header */
+    right: 100px;    /* ajusta la distancia desde el borde derecho */
+}
+
+.clock-box {
+    background-color: rgba(137, 195, 203, 0.2); /* fondo semitransparente */
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Barra Lateral Derecha */
+.sidebar {
+    width: 300px;
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-left: 3px solid var(--accent-green);
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.sidebar h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.6em;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--accent-green);
+    padding-bottom: 8px;
+}
+
+.sidebar article {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed var(--medium-gray);
+}
+
+.sidebar article:last-child {
+    border-bottom: none;
+}
+
+.sidebar article h3 {
+    font-size: 1.1em;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    font-family: 'Merriweather', serif;
+}
+
+.sidebar article h3 a {
+    color: var(--dark-text);
+    transition: color 0.3s ease;
+}
+
+.sidebar article h3 a:hover {
+    color: var(--accent-green);
+    text-decoration: underline;
+}
+
+.sidebar article p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Layout con barra lateral */
+.main-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;   /* asegura que se alineen arriba */
+}
+
+.main-content {
+    flex: 1;
+    margin-right: 30px;
+}
+
+/* Responsividad */
+@media (max-width: 992px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        margin-top: 30px;
+        border-left: none;
+        border-top: 3px solid var(--accent-green);
+    }
+}
+
+.main-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+/* El contenido principal ocupa el espacio sobrante */
+.main-content {
+    flex: 1;
+    margin-right: 30px; /* espacio entre contenido y sidebar */
+}
+
+/* Barra lateral fija a la derecha y sticky */
+.sidebar {
+    width: 300px;
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-left: 3px solid var(--accent-green);
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+
+    /* Sticky effect */
+    position: sticky;
+    top: 20px; /* distancia desde el top al hacer scroll */
+    align-self: flex-start; /* asegura que se alinee arriba */
+}
+
+/* Centrado y ancho máximo del layout */
+.container.main-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Separación entre secciones principales */
+.hero-article,
+.articles-grid,
+.latest-news {
+    margin-bottom: 40px;
+}
+
+/* Tipografía y colores más contrastantes */
+.hero-text-content h2 a,
+.news-article h3 a {
+    font-weight: 700;
+    color: #222;
+}
+
+.hero-text-content .category,
+.article-content .category {
+    color: var(--accent-green);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
 }

@@ -1,0 +1,196 @@
+/* ================================
+   Header y navegación principal
+   Archivo: css/header.css
+   ================================ */
+
+/* Encabezado principal */
+.main-header {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 15px 0;
+    border-bottom: 5px solid var(--accent-green);
+    position: relative; /* necesario para posicionar elementos absolutos dentro */
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Título del sitio */
+.site-title {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+}
+
+.site-title a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* Navegación principal */
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-nav li {
+    margin-left: 10px;
+}
+
+.main-nav a {
+    color: var(--white);
+    font-weight: 500;
+    padding: 5px 0;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--accent-green);
+    text-decoration: none;
+}
+
+/* Íconos dentro de la navegación */
+.main-nav i {
+    font-size: 22px;
+    transition: color .2s ease;
+}
+
+.main-nav a:hover i {
+    color: #555;
+}
+
+/* Ícono de lupa */
+.main-nav .fa-magnifying-glass {
+    color: var(--white);
+}
+
+.main-nav #search-icon:hover .fa-magnifying-glass {
+    color: var(--accent-green);
+}
+
+/* Botón de donación */
+.btn-donate {
+    background-color: var(--accent-green);
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-donate:hover {
+    background-color: #226E43;
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* Barra de búsqueda y selector de idioma */
+.header-actions {
+    background-color: #f8f8f8;
+    border-bottom: 2px solid var(--accent-green);
+    padding: 10px 0;
+    display: flex !important;
+    justify-content: center;
+    width: 100%;
+}
+
+.header-actions.hidden {
+    display: none !important;
+}
+
+.action-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.search-form {
+    display: flex;
+    flex-grow: 1;
+    max-width: 600px;
+}
+
+#search-input {
+    padding: 10px 15px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 5px 0 0 5px;
+    font-size: 1em;
+    flex-grow: 1;
+    transition: border-color 0.3s ease;
+}
+
+#search-input:focus {
+    border-color: var(--accent-green);
+    outline: none;
+}
+
+.search-form button {
+    background-color: var(--accent-green);
+    color: var(--white);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #226E43;
+}
+
+.language-selector select {
+    padding: 10px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--dark-text);
+}
+
+/* Reloj en el header */
+.clock-wrapper {
+    position: absolute;
+    bottom: 5px;
+    right: 100px;
+}
+
+.clock-box {
+    background-color: rgba(137, 195, 203, 0.2);
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Responsividad del header */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .main-nav li {
+        margin: 5px 0;
+    }
+    .site-title {
+        font-size: 2em;
+    }
+}

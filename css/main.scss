@@ -1,0 +1,26 @@
+@import "variables";
+@import "base";
+@import "header";
+@import "hero";
+@import "articles";
+@import "sidebar";
+@import "footer";
+@import "pages";
+@import "responsive";
+
+
+/* --- compilar un archivo
+
+primero agregamos el compilador con:
+npm install -g sass
+
+segundo
+sass css/main.scss css/main.css
+
+para compilar automaticamente
+sass --watch css/main.scss css/main.css
+
+la compilación genera un archivo .css y agregamos el link del archivo al index
+un ejemplo de ello seria: sass css/main.scss css/main.css
+ que genera: <link rel="stylesheet" href="css/main.css">
+--- */

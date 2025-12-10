@@ -1,0 +1,42 @@
+/* ================================
+   Footer del sitio
+   Archivo: css/footer.css
+   ================================ */
+
+.main-footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.9em;
+    border-top: 5px solid var(--accent-green);
+}
+
+.main-footer a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.main-footer a:hover {
+    color: var(--accent-green);
+    text-decoration: underline;
+}
+
+/* Enlaces sociales */
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    font-size: 1.2em;
+    margin: 0 8px;
+    display: inline-block;
+}
+
+/* Colores oficiales de íconos */
+.fa-x-twitter { color: #000000; }
+.fa-youtube { color: #FF0000; }
+.fa-circle-play { color: #E93A3A; } /* Odysee (simulado) */
+.fa-vk { color: #0077FF; }

@@ -1,174 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dumbland News - El Reportaje Más Verdadero por Ronald Dumb</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dumbland News - El Reportaje Más Verdadero por Ronald Dumb</title>
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
+
 <body>
-    <header class="main-header">
-    <div class="container">
-        <h1 class="site-title">
-            <a href="index.html">DUMBLAND NEWS</a>
-        </h1>
-        <nav class="main-nav">
-            <ul>
-                <li>
-                    <a href="#" id="search-icon" aria-label="Buscar Noticias">
-                        <i class="fas fa-magnifying-glass"></i>
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="https://twitter.com/tu_cuenta_de_x" target="_blank" aria-label="X">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/channel/tu_canal_de_youtube" target="_blank" aria-label="YouTube">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://odysee.com/@tu_canal_de_odysee" target="_blank" aria-label="Odysee">
-                        <i class="fa-brands fa-odysee"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://vk.com/tu_pagina_de_vk" target="_blank" aria-label="VK">
-                        <i class="fa-brands fa-vk"></i>
-                    </a>
-                </li>
-                <li>
-                    <div class="language-selector">
-                        <select id="language-select" aria-label="Selector de Idioma">
-                            <option value="es" selected>Español</option>
-                            <option value="en">English</option>
-                        </select>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-    </div>
 
-    <div class="container">
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="videos.html">Videos</a></li>
-                <li><a href="about.html">Ronald Dumb</a></li>
-                <li><a href="shop.html">Tienda</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-                <li><a href="#" class="btn btn-donate">Donar Ahora</a></li>
-            </ul>
-        </nav>
-    </div>
+  <div id="header"></div>
+  <div class="container main-layout">
+  <main class="main-content">
+    <div id="hero"></div>
+    <div id="articles-grid"></div>
+    <div id="latest-news"></div>
+  </main>
 
-    <div id="search-bar-wrapper" class="header-actions hidden">
-        <div class="container action-elements">
-            <form id="search-form" class="search-form">
-                <input type="text" id="search-input" placeholder="Buscar Noticias Falsas..." aria-label="Buscar Noticias Falsas">
-                <button type="submit" aria-label="Buscar"><i class="fas fa-search"></i></button>
-            </form>
-        </div>
-    </div>
-</header>
+  <!-- Sidebar contenedor -->
+  <aside id="sidebar" class="sidebar"></aside>
+</div>
 
+  <div id="footer"></div>
 
+  <script>
+    async function loadSection(id, file) {
+      const response = await fetch(file);
+      const html = await response.text();
+      document.getElementById(id).innerHTML = html;
+    }
 
-    <main class="container main-content">
-        <section class="hero-article">
-            <img src="https://via.placeholder.com/1200x600?text=RONALD+DUMB+EN+DUMBLAND" alt="Ronald Dumb en la Casa Blanca de Dumbland" class="hero-image">
-            <div class="hero-text-content">
-                <span class="category">Noticia de Última Hora</span>
-                <h2><a href="#">Ronald Dumb Declara que Todos los Lunes Serán Ahora "Día de Pizza y Decretos Presidenciales Sorpresa"</a></h2>
-                <p>En una movida sin precedentes, el Presidente Ronald Dumb de Dumbland anunció hoy que, a partir de la próxima semana, cada lunes será dedicado a la "máxima eficiencia" mediante el consumo obligatorio de pizza y la emisión de decretos espontáneos que "cambiarán el juego" de Dumbland para siempre. Expertos están "sin palabras" y los ciudadanos "confundidos pero intrigados".</p>
-                <div class="article-meta">
-                    <span>Por: <a href="#">Un Periodista Muy Valiente</a></span>
-                    <span class="date">Octubre 26, 2023</span>
-                </div>
-            </div>
-        </section>
+    loadSection("header", "header.html");
+    loadSection("hero", "hero.html");
+    loadSection("articles-grid", "articles-grid.html");
+    loadSection("latest-news", "latest-news.html");
+    loadSection("sidebar", "sidebar.html");
+    loadSection("footer", "footer.html");
+  </script>
 
-        <section class="articles-grid">
-            <article class="news-article">
-                <img src="https://via.placeholder.com/400x250?text=MURO+DE+DUMBLAND" alt="Muro de Dumbland" class="article-image">
-                <div class="article-content">
-                    <span class="category">Política Exterior</span>
-                    <h3><a href="#">Dumbland Anuncia la Construcción de un Muro Flotante para Evitar "Patos Migratorios"</a></h3>
-                    <p>Preocupado por la "invasión de plumíferos", el gobierno de Dumbland invertirá billones en un muro submarino y flotante que, según expertos, "no tiene sentido biológico ni físico".</p>
-                    <div class="article-meta">
-                        <span>Por: <a href="#">Pato Donald (Jr.)</a></span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="news-article">
-                <img src="https://via.placeholder.com/400x250?text=ECONOMIA+DE+DUMBLAND" alt="Moneda de Dumbland" class="article-image">
-                <div class="article-content">
-                    <span class="category">Economía</span>
-                    <h3><a href="#">La Moneda de Dumbland, el "Dumbcoin", Ahora se Negocia con Galletas de Animales</a></h3>
-                    <p>Tras una serie de políticas económicas "audaces", el valor del Dumbcoin ha sido atado a la oferta y demanda de galletas de animales, generando pánico en los mercados internacionales.</p>
-                    <div class="article-meta">
-                        <span>Por: <a href="#">Un Analista Sorprendido</a></span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="news-article">
-                <img src="https://via.placeholder.com/400x250?text=CIENCIA+DE+DUMBLAND" alt="Científico de Dumbland" class="article-image">
-                <div class="article-content">
-                    <span class="category">Ciencia y Tecnología</span>
-                    <h3><a href="#">Científicos de Dumbland "Descubren" que el Sol es una "Bombilla Gigante"</a></h3>
-                    <p>Después de años de investigación financiada por el estado, los científicos de Dumbland presentan pruebas irrefutables de que el sol es "claramente un foco encendido por alguien".</p>
-                    <div class="article-meta">
-                        <span>Por: <a href="#">Dr. Insólito</a></span>
-                    </div>
-                </div>
-            </article>
-        </section>
-
-        <section class="latest-news">
-            <h2>Últimas Noticias de Dumbland</h2>
-            <div id="dynamic-news-list">
-                <!-- Noticias adicionales serán cargadas aquí por TypeScript -->
-                <article class="small-news-item">
-                    <h3><a href="#">Juez de Dumbland Dictamina que "La Gravedad es Opcional" para Ciertas Élite</a></h3>
-                    <div class="article-meta">
-                        <span>Octubre 25, 2023</span>
-                    </div>
-                </article>
-                <article class="small-news-item">
-                    <h3><a href="#">Ronald Dumb Promete un "Super-Túnel" Directo a la Luna para el 2025, sin Plan de Construcción</a></h3>
-                    <div class="article-meta">
-                        <span>Octubre 24, 2023</span>
-                    </div>
-                </article>
-                <article class="small-news-item">
-                    <h3><a href="#">El Nuevo Himno Nacional de Dumbland es el Ruido de un "Pato Tocando la Trompeta"</a></h3>
-                    <div class="article-meta">
-                        <span>Octubre 23, 2023</span>
-                    </div>
-                </article>
-            </div>
-        </section>
-    </main>
-
-    <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2023 Dumbland News. Todos los derechos reservados por la Presidencia de Ronald Dumb.</p>
-            <div class="social-links">
-                <a href="#" target="_blank">YouTube</a> |
-                <a href="#" target="_blank">Otras Plataformas de Video</a> |
-                <a href="#" target="_blank">Twitter/X</a>
-            </div>
-        </div>
-    </footer>
-
-    <script type="module" src="dist/app.js"></script>
+  <script type="module" src="dist/app.js"></script>
+  <script type="module" src="dist/clock.js"></script>
+  <script type="module" src="dist/search.js"></script>
+  <script type="module" src="dist/language.js"></script>
 </body>
 </html>

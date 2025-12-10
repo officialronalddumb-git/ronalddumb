@@ -1,0 +1,49 @@
+/* ================================
+   Variables globales y estilos base
+   Archivo: css/variables.css
+   ================================ */
+
+/* 🎨 Paleta de colores Dumbland */
+:root {
+    --primary-blue: #002868;   /* Azul oscuro */
+    --accent-green: #2E8B57;   /* Verde intenso (reemplaza al rojo) */
+    --white: #FFFFFF;
+    --dark-text: #333333;
+    --light-gray: #EEEEEE;
+    --medium-gray: #AAAAAA;
+}
+
+/* 🔄 Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 📝 Tipografía y cuerpo */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: var(--white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 🔗 Enlaces globales */
+a {
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-green);
+    text-decoration: underline;
+}
+
+/* 📦 Contenedor general */
+.container {
+    max-width: 1200px;
+    margin: 0 50px;
+    padding: 0;
+}

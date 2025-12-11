@@ -19,6 +19,9 @@
     overflow: hidden;
     background-color: var(--white);
     transition: box-shadow 0.3s ease;
+    /* Ajuste para que los artículos en cuadrícula se estiren uniformemente */
+    display: flex;
+    flex-direction: column;
 }
 
 .news-article:hover {
@@ -32,8 +35,18 @@
     display: block;
 }
 
+.full-article-image {
+    width: auto;           /* ocupa todo el ancho disponible */
+    height: 100%;          /* respeta la proporción original */
+    max-height: 500px;     /* límite máximo de altura */
+    object-fit: cover;   /* se asegura de que llene el contenedor */
+    display: block;
+    margin: 0 auto;        /* opcional: centra la imagen */
+}
+
 .article-content {
     padding: 15px;
+    flex-grow: 1; /* Permite que el contenido se estire en la cuadrícula */
 }
 
 .news-article .category {

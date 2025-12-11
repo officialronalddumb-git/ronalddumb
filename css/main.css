@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* ================================
-   Variables globales y estilos base
-   Archivo: css/variables.css
+    Variables globales y estilos base
+    Archivo: css/variables.css
    ================================ */
 /* 🎨 Paleta de colores Dumbland */
 :root {
@@ -11,6 +11,7 @@
   --dark-text: #333333;
   --light-gray: #EEEEEE;
   --medium-gray: #AAAAAA;
+  --background-color: #f8f9fa; /* Color de fondo general del cuerpo */
 }
 
 /* 🔄 Reset básico */
@@ -43,7 +44,7 @@ a:hover {
 
 /* 📦 Contenedor general */
 .container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 50px;
   padding: 0;
 }
@@ -63,6 +64,9 @@ a:hover {
 .article-meta {
   font-size: 0.9em;
   color: var(--medium-gray);
+  /* Flex para separar autor y fecha */
+  display: flex;
+  justify-content: space-between;
 }
 
 .article-meta a {
@@ -419,6 +423,9 @@ a:hover {
   overflow: hidden;
   background-color: var(--white);
   transition: box-shadow 0.3s ease;
+  /* Ajuste para que los artículos en cuadrícula se estiren uniformemente */
+  display: flex;
+  flex-direction: column;
 }
 
 .news-article:hover {
@@ -432,8 +439,18 @@ a:hover {
   display: block;
 }
 
+.full-article-image {
+  width: auto; /* ocupa todo el ancho disponible */
+  height: 100%; /* respeta la proporción original */
+  max-height: 500px; /* límite máximo de altura */
+  object-fit: cover; /* se asegura de que llene el contenedor */
+  display: block;
+  margin: 0 auto; /* opcional: centra la imagen */
+}
+
 .article-content {
   padding: 15px;
+  flex-grow: 1; /* Permite que el contenido se estire en la cuadrícula */
 }
 
 .news-article .category {
@@ -1141,5 +1158,164 @@ a:hover {
     width: 100%;
   }
 }
+/* ================================
+   Estilos de Artículo de Noticias Completo (Página Única)
+   Archivo: css/full-article.css
+   ================================ */
+.full-news-page {
+  /* Limita el ancho del contenido para mejor legibilidad */
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 30px 0;
+  background-color: var(--white);
+  /* Añade una sombra sutil para distinguirlo del fondo del cuerpo */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Contenido interno del artículo (Aplica padding) */
+.article-content {
+  padding: 0 30px;
+}
+
+/* --- Título Principal y Meta --- */
+.full-news-page h2 {
+  font-family: "Merriweather", serif;
+  font-size: 2.8em; /* Mucho más grande que en las cuadrículas */
+  line-height: 1.15;
+  margin-bottom: 15px;
+  color: var(--dark-text);
+}
+
+.full-news-page .article-meta {
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--light-gray);
+  margin-bottom: 30px;
+  font-size: 1em;
+}
+
+/* --- Introducción (El primer párrafo destacado) --- */
+.introduction {
+  font-family: "Georgia", serif; /* Fuente serif para la introducción */
+  font-size: 1.3em;
+  font-style: italic;
+  color: #444;
+  margin: 25px 0 35px;
+  padding: 15px 0;
+  border-top: 1px solid var(--light-gray);
+  border-bottom: 1px solid var(--light-gray);
+}
+
+/* --- Contenido del Cuerpo (Párrafos) --- */
+.full-news-page p {
+  font-size: 1.15em; /* Mayor legibilidad */
+  line-height: 1.8;
+  margin-bottom: 25px;
+  text-align: justify; /* Look periodístico */
+}
+
+/* --- Subtítulos del Reportaje --- */
+.full-news-page h3 {
+  font-family: "Merriweather", serif;
+  font-size: 1.8em;
+  color: var(--primary-blue);
+  margin-top: 40px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 3px solid var(--accent-green);
+}
+
+/* --- Citas (Blockquote) --- */
+blockquote {
+  margin: 30px 0;
+  padding: 20px 20px 20px 30px;
+  border-left: 5px solid var(--accent-green);
+  background-color: #f9f9f9;
+  font-size: 1.4em;
+  font-style: italic;
+  color: #444;
+  line-height: 1.4;
+  border-radius: 4px;
+}
+
+/* --- Listas y Referencias --- */
+.references-section {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+}
+
+.references-section h4 {
+  font-family: "Merriweather", serif;
+  font-size: 1.2em;
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+}
+
+.references-section ul {
+  list-style: disc;
+  margin-left: 20px;
+  font-size: 0.95em;
+}
+
+/* --- Disclaimer (Descargo) --- */
+.disclaimer-section {
+  margin-top: 30px;
+  padding: 15px;
+  border: 1px dashed var(--medium-gray);
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-style: italic;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* --- Imagenes internas con caption (opcional) --- */
+.full-news-page figure {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.full-news-page figcaption {
+  font-size: 0.9em;
+  color: var(--medium-gray);
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* --- Responsividad del contenido interno --- */
+@media (max-width: 768px) {
+  .article-content {
+    padding: 0 15px;
+  }
+  .full-news-page h2 {
+    font-size: 2em;
+  }
+  .full-news-page p {
+    font-size: 1em;
+  }
+  .introduction {
+    font-size: 1.1em;
+  }
+  blockquote {
+    font-size: 1.1em;
+    padding: 15px 15px 15px 25px;
+  }
+}
+/* --- compilar un archivo
+
+primero agregamos el compilador con:
+npm install -g sass
+
+segundo (compilar manualmente)
+sass css/main.scss css/main.css
+
+para compilar automaticamente
+sass --watch css/main.scss css/main.css
+
+la compilación genera un archivo .css y agregamos el link del archivo al index
+un ejemplo de ello seria: sass css/main.scss css/main.css
+ que genera: <link rel="stylesheet" href="css/main.css">
+--- */
 
 /*# sourceMappingURL=main.css.map */

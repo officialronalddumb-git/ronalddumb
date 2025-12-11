@@ -1,6 +1,6 @@
 /* ================================
-   Variables globales y estilos base
-   Archivo: css/variables.css
+    Variables globales y estilos base
+    Archivo: css/variables.css
    ================================ */
 
 /* 🎨 Paleta de colores Dumbland */
@@ -11,6 +11,7 @@
     --dark-text: #333333;
     --light-gray: #EEEEEE;
     --medium-gray: #AAAAAA;
+    --background-color: #f8f9fa; /* Color de fondo general del cuerpo */
 }
 
 /* 🔄 Reset básico */
@@ -43,7 +44,7 @@ a:hover {
 
 /* 📦 Contenedor general */
 .container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 50px;
     padding: 0;
 }

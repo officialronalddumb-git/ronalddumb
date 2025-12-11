@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dumbland News - El Reportaje Más Verdadero por Ronald Dumb</title>
+
+  <link rel="stylesheet" href="../../css/main.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+
+<body>
+
+  <div id="header"></div>
+  
+  <div class="container main-layout">
+  <main class="main-content">
+
+<!-- Aqui se comienza a agregar la noticia -->
+
+
+
+
+
+
+
+
+    
+
+
+    <article class="news-article">
+    <img src="/assets/images/news/nueva-derecha-mexicana.png" alt="Trump leading the new mexican rigth" class="full-article-image">
+    <div class="article-content">
+        <span class="category">Geopolítica / Sátira</span>
+        <h2>La Nueva Derecha Mexicana Aplaude la Estrategia Hemisférica de Trump y Habla de “Blindar a México del Globalismo Woke”</h2>
+        
+        <p class="introduction">
+            Good evening, dear readers. Edward “The Professor” Miller here, reporting for <em>Dumbland News</em>, where geopolitics meets academic over-analysis and the occasional sarcastic jab. Tonight’s headline: Mexico’s National Council of the New Right has enthusiastically endorsed President Donald Trump’s new hemispheric security strategy — a document they claim will shield Mexico from “woke globalism” and “the red invasion.” Yes, nothing says calm policy debate like apocalyptic metaphors and civilizational doom.
+        </p>
+
+        <h3>El Reportaje</h3>
+        
+        <p>
+            The endorsement, released on December 6, frames the United States’ 2025 National Security Strategy as a kind of ideological Swiss Army knife — capable of defending Christianity, Western civilization, and presumably anyone who feels personally attacked by postmodernism. According to the Council, the strategy “nurtures and organizes the struggle for Christianity and Western civilization,” language that evokes medieval crusade chronicles, though with fewer horses and more PDFs.
+        </p>
+        
+        <p>
+            The statement warns of “extracontinental communist interference,” a category broad enough to include China, Russia, and perhaps that one college roommate who once quoted Marx after two beers. The Council insists that the Trump administration is not merely proposing territorial defense but a “civilizational battle” against “postmodern Marxism” and “woke madness.” One imagines a lecture hall where Clausewitz sits next to memes about cultural decline.
+        </p>
+        
+        <p>
+            Among the most dramatic elements is the so‑called “Trump Corollary” to the Monroe Doctrine — a phrase that suggests someone has been waiting decades to update 19th‑century U.S. foreign policy with a modern sequel. In their telling, this corollary involves cutting off the “economic and espionage tentacles of Communist China.” Tentacles, of course, being the preferred metaphor of political groups wishing to convey menace without resorting to actual zoology.
+        </p>
+        
+        <p>
+            The Council also declares that Mexico’s “flirtation with the Beijing regime is over,” interpreting the U.S. strategy as an invitation to pursue “real nearshoring” and build “regional champions” in North America. A bold claim — though if global supply chains could be reorganized simply by declaring flirtation over, the world economy would look very different.
+        </p>
+        
+        <p>
+            On security matters, the Council highlights the U.S. stance on drug cartels, noting that designating them as Foreign Terrorist Organizations would provide “legal and operational tools” to confront organized crime. They contrast this with Mexico’s “hugs, not bullets” approach, a phrase that has become a favorite target for critics who prefer their security strategies with more hardware and fewer metaphors.
+        </p>
+        
+        <p>
+            Finally, the Council urges Mexico to align fully with the U.S. plan, describing it as a “Peace Through Strength Strategy” that would “restore internal order” and “shield Mexico from impoverishing communism.” The rhetoric is sweeping, the tone urgent, and the historical references… eclectic. One might say the statement reads like a hybrid between a policy memo and a sermon delivered by someone who keeps a bust of Winston Churchill on their desk and occasionally winks at it for inspiration.
+        </p>
+
+        <h3>Conclusión</h3>
+        
+        <p>
+            The New Right’s endorsement of Trump’s hemispheric security strategy reveals a political current eager to frame geopolitics as an existential struggle between civilizations, ideologies, and — apparently — tentacled foreign powers. Whether this framing will influence Mexico’s actual policy decisions remains uncertain. What is clear is that the Council has embraced a narrative in which Mexico’s future hinges on aligning with Washington’s vision of regional order and resisting ideological foes. As always, the real test will come not in the rhetoric but in the implementation — and in whether policymakers can navigate global complexities without turning every disagreement into a clash of civilizations worthy of a Hollywood reboot.
+        </p>
+
+        <div class="references-section">
+            <h4>Referencias</h4>
+            <ul>
+                <li>Arochi, Ximena. “Nueva derecha apoya estrategia de Trump que ‘blindará a México del globalismo woke’.” Proceso, 6 de diciembre.</li>
+                <li>United States National Security Strategy 2025 (referenced by the Council).</li>
+                <li>Comunicado del Consejo Nacional de Nueva Derecha, 6 de diciembre.</li>
+            </ul>
+        </div>
+
+        <div class="disclaimer-section">
+            <h4>Descargo de Responsabilidad (Disclaimer)</h4>
+            <p>
+                <em>Este reportaje es una obra de sátira política basada en hechos reales reportados por medios reconocidos. El análisis y los comentarios humorísticos reflejan el estilo ficticio de Edward “The Professor” Miller, no la postura oficial de Dumbland News (que, por cierto, tampoco existe). Si algo de esto le incomoda, recuerde: la sátira es más segura que una conferencia de prensa internacional.</em>
+            </p>
+        </div>
+
+        <div class="article-meta">
+            <span>Por: Edward “The Professor” Miller</span>
+            <span class="publication-date">Dumbland News</span>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+<!-- hasta aqui -->
+
+
+    <div id="articles-grid"></div>
+    <div id="latest-news"></div>
+  </main>
+
+  <!-- Sidebar contenedor -->
+  <aside id="sidebar" class="sidebar"></aside>
+</div>
+
+  <div id="footer"></div>
+
+  <script>
+    async function loadSection(id, file) {
+      const response = await fetch(file);
+      const html = await response.text();
+      document.getElementById(id).innerHTML = html;
+    }
+
+    loadSection("header", "../../header.html");
+    loadSection("hero", "../../hero.html");
+    loadSection("articles-grid", "../../articles-grid.html");
+    loadSection("latest-news", "../../latest-news.html");
+    loadSection("sidebar", "../../sidebar.html");
+    loadSection("footer", "../../footer.html");
+  </script>
+
+  <script type="module" src="../../dist/app.js"></script>
+  <script type="module" src="../../dist/clock.js"></script>
+  <script type="module" src="../../dist/search.js"></script>
+  <script type="module" src="../../dist/language.js"></script>
+</body>
+</html>

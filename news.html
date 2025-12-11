@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dumbland News - El Reportaje Más Verdadero por Ronald Dumb</title>
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+
+<body>
+
+  <div id="header"></div>
+  
+  <div class="container main-layout">
+  <main class="main-content">
+
+
+
+<!-- las noticias se van agregando como en "articles-grid pero deben de bajarse
+ hasta el final a diferencia de lo que pasa en la pagina principal donde unicamente
+ debe tener tres o cuatro lineas de noticias" -->
+
+   
+
+    <div id="articles-grid"></div>
+
+
+<!-- final de la parte principal de esta pagina, hay que revisar si el articles-grid
+ requiere cambios -->
+
+
+
+
+
+    <div id="latest-news"></div>
+  </main>
+
+  <!-- Sidebar contenedor -->
+  <aside id="sidebar" class="sidebar"></aside>
+</div>
+
+  <div id="footer"></div>
+
+  <script>
+    async function loadSection(id, file) {
+      const response = await fetch(file);
+      const html = await response.text();
+      document.getElementById(id).innerHTML = html;
+    }
+
+    loadSection("header", "header.html");
+    loadSection("hero", "hero.html");
+    loadSection("articles-grid", "articles-grid.html");
+    loadSection("latest-news", "latest-news.html");
+    loadSection("sidebar", "sidebar.html");
+    loadSection("footer", "footer.html");
+  </script>
+
+  <script type="module" src="dist/app.js"></script>
+  <script type="module" src="dist/clock.js"></script>
+  <script type="module" src="dist/search.js"></script>
+  <script type="module" src="dist/language.js"></script>
+</body>
+</html>

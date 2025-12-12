@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dumbland News - The Most Accurate Report by Mary “Bullet” Johnson</title>
+
+  <link rel="stylesheet" href="../../css/main.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+
+<body>
+
+  <div id="header"></div>
+  
+  <div class="container main-layout">
+  <main class="main-content">
+
+<!-- Aqui se comienza a agregar la noticia -->
+
+<div class="full-news-page">
+    <article class="news-article">
+        <img src="assets/images/news/shawn-dan-crenshaw.png" alt="Political tension between Shawn Ryan and Dan Crenshaw" class="full-article-image">
+        
+        <div class="article-content">
+            <span class="category">Politics / Media Clash</span>
+            
+            <h2>Shawn Ryan vs. Dan Crenshaw: When Podcasts, Parties, and Politics Collide</h2>
+            
+            <div class="article-meta">
+                <span>By: Mary “Bullet” Johnson</span>
+                <span class="date">Dec 12, 2025</span>
+            </div>
+
+            <p class="introduction">
+                Good evening, readers. Mary “Bullet” Johnson reporting for <em>Dumbland News</em>. Tonight’s story features two former Navy SEALs, one expensive party, one angry congressman, and a podcast microphone that refuses to stay quiet. Yes, welcome to America, where the First Amendment is strong, but some political egos are apparently stronger.
+            </p>
+
+            <h3>The Report</h3>
+            
+            <p>
+                The drama began when podcast host Shawn Ryan dared to ask a question that many Americans whisper but rarely say out loud: how does a congressman making $174,000 a year afford a party with Steve Aoki spinning tracks like it’s a Pentagon-funded rave? Ryan insists he didn’t even mention Rep. Dan Crenshaw’s name at first — which is adorable, because in Washington, if the shoe fits, the politician will still claim it’s a smear campaign.
+            </p>
+            
+            <p>
+                According to Ryan, on December 9 he received a legal demand letter from Crenshaw’s attorneys. The letter allegedly demanded that he remove content, issue a public apology, and — my personal favorite — stop talking about Crenshaw altogether. Because nothing calms down a controversy like trying to silence the guy with a million followers and a camera.
+            </p>
+            
+            <p>
+                Ryan responded with a polite, diplomatic “I’m not going to do any of that.” He then posted a video explaining the situation, complete with a screenshot of an Instagram message from Crenshaw accusing him of believing “trendy narratives instead of facts.” A bold accusation in 2025, when half of Congress gets its talking points from memes and the other half from conspiracy podcasts.
+            </p>
+            
+            <p>
+                Both men are former Navy SEALs, which adds a layer of macho tension to the whole affair. Ryan says he interpreted Crenshaw’s message as threatening — especially given Crenshaw’s infamous hot‑mic moment earlier this year, when he said he’d “kill” Tucker Carlson if they ever met. Charming. Nothing like a little bipartisan homicide fantasy to spice up the news cycle.
+            </p>
+
+            <blockquote>
+                “I asked questions about Congressman Crenshaw’s wealth,” Ryan said. “Those questions are fair game. He is a public official. He makes decisions that affect all of us. The public has a right to ask how he’s getting rich while he’s in office.”
+            </blockquote>
+            
+            <p>
+                Crenshaw later responded on X, saying: “Sorry Shawn, but it is not believable that a fellow SEAL actually read this message and believed I was threatening to ‘whoop his ass.’” Which is a fascinating defense. Not “I didn’t threaten you,” but “No real SEAL would think I threatened you.” A subtle distinction, but hey — in Washington, semantics are more flexible than ethics rules.
+            </p>
+            
+            <p>
+                Meanwhile, the right is screaming censorship, the left is screaming corruption, and the rest of us are just screaming into the void. It’s a perfect Dumbland‑style political circus: two ex‑SEALs, one DJ, a lawsuit threat, and a congressman who apparently throws parties that cost more than most Americans’ annual rent.
+            </p>
+            
+            <h3>Conclusion</h3>
+            
+            <p>
+                Whether the lawsuit materializes or not, the public has already made its judgment: if you’re a congressman throwing luxury parties with celebrity DJs, someone’s going to ask how you paid for it. And if your response is “Stop talking about me,” well… good luck with that. This is America. We talk.
+            </p>
+
+            <div class="references-section">
+                <h4>References</h4>
+                <ul>
+                    <li>Banerjee, Shamik. “Why Rep. Dan Crenshaw is threatening to sue Shawn Ryan,” Dec 12, 2025.</li>
+                    <li>Statements and posts from Shawn Ryan on X.</li>
+                    <li>Public comments from Rep. Dan Crenshaw on X.</li>
+                    <li>TNND Washington reporting.</li>
+                </ul>
+            </div>
+
+            <div class="disclaimer-section">
+                <h4>Disclaimer</h4>
+                <p>
+                    <em>This report is a work of political satire. All factual references are drawn from publicly available news sources. The analysis and humorous commentary reflect the fictional style of Mary “Bullet” Johnson, not the official position of Dumbland News (which, for the record, does not exist). If you feel offended, remember: satire is cheaper than litigation.</em>
+                </p>
+            </div>
+
+            <div class="article-meta">
+                <span>By: Mary “Bullet” Johnson</span>
+                <span class="publication-date">Dumbland News</span>
+            </div>
+        </div>
+    </article>
+</div>
+
+<!-- hasta aqui -->
+
+    <div id="articles-grid"></div>
+    <div id="latest-news"></div>
+  </main>
+
+  <aside id="sidebar" class="sidebar"></aside>
+</div>
+
+  <div id="footer"></div>
+
+  <script>
+    async function loadSection(id, file) {
+      const response = await fetch(file);
+      const html = await response.text();
+      document.getElementById(id).innerHTML = html;
+    }
+
+    loadSection("header", "../../header.html");
+    loadSection("hero", "../../hero.html");
+    loadSection("articles-grid", "../../articles-grid.html");
+    loadSection("latest-news", "../../latest-news.html");
+    loadSection("sidebar", "../../sidebar.html");
+    loadSection("footer", "../../footer.html");
+  </script>
+
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+  <script type="module" src="../../dist/app.js"></script>
+  <script type="module" src="../../dist/clock.js"></script>
+  <script type="module" src="../../dist/search.js"></script>
+  <script type="module" src="../../dist/language.js"></script>
+</body>
+</html>

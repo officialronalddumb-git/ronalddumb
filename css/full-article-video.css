@@ -1,0 +1,36 @@
+/*
+ * Archivo: _full-article-video.css
+ * Descripción: Estilos para hacer que el reproductor de video HTML5 en
+ * los artículos individuales sea responsivo y ocupe el ancho completo.
+ */
+
+/* Contenedor que establece la relación de aspecto (16:9) */
+.video-container {
+    /* Define la posición relativa para que los hijos absolutos (el video) se posicionen respecto a él */
+    position: relative;
+    width: 100%;
+    
+    /* Truco de responsive: padding-bottom = (9 / 16) * 100 = 56.25% */
+    /* Esto obliga al contenedor a tener una altura proporcional al ancho */
+    padding-bottom: 56.25%; 
+    
+    height: 0; /* Necesario para que el padding-bottom controle la altura */
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #000;
+    border-radius: 5px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sutil sombra para destacarlo */
+}
+
+/* El elemento <video> en sí mismo */
+.full-article-video {
+    /* Ocupa todo el espacio del contenedor padre */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+}

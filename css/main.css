@@ -4,6 +4,7 @@
     Archivo: css/variables.css
    ================================ */
 /* 🎨 Paleta de colores Dumbland */
+@import "full-article-video.css";
 :root {
   --primary-blue: #002868; /* Azul oscuro */
   --accent-green: #2E8B57; /* Verde intenso (reemplaza al rojo) */

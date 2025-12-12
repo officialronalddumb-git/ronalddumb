@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dumbland News - El Reportaje Más Verdadero por Ronald Dumb</title>
+
+  <link rel="stylesheet" href="../../css/main.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+
+<body>
+
+  <div id="header"></div>
+  
+  <div class="container main-layout">
+  <main class="main-content">
+
+<!-- Aqui se comienza a agregar la noticia -->
+
+
+
+
+
+
+
+
+<div class="full-news-page">
+    <article class="news-article">
+        <img src="assets/images/news/trump-real-deepfake.png" alt="Discussion about AI-generated images and misinformation" class="full-article-image">
+        
+        <div class="article-content">
+            <span class="category">Technology / Media Literacy</span>
+            
+            <h2>Real or Deepfake? In Dumbland, the Only Thing Walking is the Truth—Straight Off a Cliff</h2>
+            
+            <div class="article-meta">
+                <span>By: Sergéi Volkov</span>
+                <span class="date">Dec 12, 2025</span>
+            </div>
+
+            <p class="introduction">
+                Reporting from <em>Dumbland News</em>, Sergéi Volkov dives into the latest viral confusion: an AI‑generated image circulating online and the broader chaos it reveals about misinformation, digital manipulation, and a society struggling to keep up with synthetic reality.
+            </p>
+
+            <h3>The Report</h3>
+            
+            <p>
+                A digitally altered image recently spread across social platforms, prompting widespread debate about authenticity. The image, which appeared to show a political figure using a golden walker, was quickly identified by experts and automated detection tools as AI‑generated. Indicators such as distorted hands, inconsistent lighting, and a SynthID watermark confirmed its synthetic origin.
+            </p>
+
+            <p>
+                Despite these clear signs, the image gained traction across polarized online communities. Some users treated it as evidence supporting their existing beliefs, while others denounced it as an intentional attempt to mislead. The rapid spread highlighted how easily manipulated visuals can influence public perception, especially when they align with emotionally charged narratives.
+            </p>
+
+            <p>
+                Analysts noted that while attention focused on the viral image, a separate and significant policy development regarding AI regulation received far less public scrutiny. This contrast underscored how sensational misinformation can overshadow substantive issues, drawing attention away from decisions with long‑term societal impact.
+            </p>
+
+            <blockquote>
+                “In an environment where synthetic media is increasingly convincing, the most important skill is not sharing quickly, but verifying carefully,” one media literacy expert noted.
+            </blockquote>
+
+            <p>
+                Tools such as AI‑assisted fact‑checkers, watermark detection, and visual forensics can help users identify manipulated content. However, specialists caution that relying solely on automated systems is insufficient; critical thinking and cross‑checking remain essential. Users are encouraged to look for visual inconsistencies, improbable details, and contextual red flags before accepting or sharing viral images.
+            </p>
+
+            <p>
+                The incident also sparked discussion about the ethical implications of using AI‑generated imagery to mock or criticize public figures. Commentators across the political spectrum debated whether such content constitutes satire, misinformation, or something in between, reflecting broader concerns about the boundaries of digital expression.
+            </p>
+
+            <h3>Conclusion</h3>
+            
+            <p>
+                As AI‑generated media becomes more sophisticated, distinguishing fact from fabrication grows increasingly challenging. The recent viral image serves as a reminder that in a landscape saturated with synthetic content, the responsibility to verify information falls on every user. Without careful scrutiny, misinformation can spread faster than truth—and in Dumbland, that truth sometimes seems to be walking straight off a cliff.
+            </p>
+
+            <div class="references-section">
+                <h4>References</h4>
+                <ul>
+                    <li>Tenser, P. (2025, December 12). Coverage on AI‑generated images and detection methods.</li>
+                    <li>Das Biswas, S. (2025, December 12). Reporting on viral synthetic imagery.</li>
+                    <li>Grok AI Fact‑Check Response (2025). Internal Dumbland News Archive.</li>
+                    <li>SynthID Digital Watermark Detection Log, Google DeepMind (2025).</li>
+                </ul>
+            </div>
+
+            <div class="disclaimer-section">
+                <h4>Disclaimer</h4>
+                <p>
+                    <em>This article is a satirical commentary on media literacy and misinformation. All factual references are drawn from publicly available reporting. The humorous tone reflects the fictional style of Dumbland News and does not represent real‑world claims about any individual.</em>
+                </p>
+            </div>
+
+            <div class="article-meta">
+                <span>By: Sergéi Volkov</span>
+                <span class="publication-date">Dumbland News</span>
+            </div>
+        </div>
+    </article>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- hasta aqui -->
+
+
+    <div id="articles-grid"></div>
+    <div id="latest-news"></div>
+  </main>
+
+  <!-- Sidebar contenedor -->
+  <aside id="sidebar" class="sidebar"></aside>
+</div>
+
+  <div id="footer"></div>
+
+  <script>
+    async function loadSection(id, file) {
+      const response = await fetch(file);
+      const html = await response.text();
+      document.getElementById(id).innerHTML = html;
+    }
+
+    loadSection("header", "../../header.html");
+    loadSection("hero", "../../hero.html");
+    loadSection("articles-grid", "../../articles-grid.html");
+    loadSection("latest-news", "../../latest-news.html");
+    loadSection("sidebar", "../../sidebar.html");
+    loadSection("footer", "../../footer.html");
+  </script>
+
+  <script type="module" src="../../dist/app.js"></script>
+  <script type="module" src="../../dist/clock.js"></script>
+  <script type="module" src="../../dist/search.js"></script>
+  <script type="module" src="../../dist/language.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dumbland News - The Most Accurate Report by Mary “Bullet” Johnson</title>
+
+  <link rel="stylesheet" href="../../css/main.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+
+<body>
+
+  <div id="header"></div>
+  
+  <div class="container main-layout">
+  <main class="main-content">
+
+<!-- Aqui se comienza a agregar la noticia -->
+
+
+
+
+
+
+
+
+<div class="full-news-page">
+    <article class="news-article">
+       <!-- <img src="https://example.com/trump-ai-order.jpg" alt="Trump signs AI Executive Order" class="full-article-image"> -->
+        
+        <div class="article-content">
+            <span class="category">Politics / AI Regulation</span>
+            
+            <h2>The Silicon Caesar: Trump’s AI Executive Order and the Art of Regulatory Vandalism</h2>
+            
+            <div class="article-meta">
+                <span>By: Edward “The Professor” Miller</span>
+                <span class="date">Dec 12, 2025</span>
+            </div>
+
+            <p class="introduction">
+                Good afternoon, students. Edward “The Professor” Miller reporting for <em>Dumbland News</em>. Today’s lecture explores a fresh masterpiece of American political theater: President Donald Trump’s Executive Order blocking U.S. states from regulating artificial intelligence. A move framed as “innovation,” but executed with all the subtlety of a Roman emperor swinging a golden sledgehammer.
+            </p>
+
+            <h3>The Report</h3>
+
+            <p>
+                The President warned that states like California and Colorado were poised to “suffocate” AI innovation with a “cumbersome tangle of onerous regulations.” His argument: in the global AI race, “there’s only going to be one winner,” and China’s unified regulatory model—ethically questionable as it may be—offers a competitive advantage. The horror, he insisted, of companies needing “50 authorizations in 50 states” was simply “impossible.”
+            </p>
+
+            <p>
+                Of course, this ignores two centuries of American federalism, where states act as “laboratories of democracy.” Colorado, Utah, and California have already passed laws requiring algorithmic transparency and bias assessments—basic guardrails for technologies that now influence hiring, lending, and healthcare. These are not radical ideas; they are overdue protections.
+            </p>
+
+            <p>
+                Yet the Executive Order directs the Attorney General to challenge state AI laws and instructs the Department of Commerce to compile a list of “problematic” regulations. The kicker: states that dare regulate AI risk losing federal funding, including broadband grants. Innovation by coercion—truly the American way.
+            </p>
+
+            <p>
+                Venture capitalist David Sacks, whose financial interests in AI are as large as his political influence, reassured the public that only the “most onerous” state rules would be targeted. Child safety laws, he claimed, would remain untouched. Translation: “We’ll keep the guardrails that don’t cost our donors money.”
+            </p>
+
+            <p>
+                The timing is also convenient. As rumors swirl about the President’s health and the Epstein files dominate headlines, the administration drops a sweeping policy shift. A classic misdirection: “Look at the shiny AI order while we quietly bury the uncomfortable stuff.”
+            </p>
+
+            <p>
+                Ultimately, the order tells states—Colorado, California, Utah, and Texas among them—to step aside and let Silicon Valley handle ethics. It’s a return to Gilded Age logic: what’s good for Google is good for America.
+            </p>
+
+            <h3>Conclusion</h3>
+
+            <p>
+                Trump’s Executive Order is less about preparing the U.S. for the future of AI and more about shielding corporations from democratic oversight. By threatening funding and empowering federal challenges to state laws, the administration signals that in the AI era, the government’s priority is not protecting citizens from algorithmic discrimination, but protecting companies from accountability. James Madison would be weeping into his powdered wig.
+            </p>
+
+            <div class="references-section">
+                <h4>References</h4>
+                <ul>
+                    <li>Euronews with AP. “Donald Trump signs executive order to prevent US states from regulating AI,” Dec 12, 2025.</li>
+                    <li>International Association of Privacy Professionals (IAPP). State AI Legislation Tracker.</li>
+                    <li>Trump, D. “Executive Order on Promoting Innovation and Competition in Artificial Intelligence,” Dec 11, 2025.</li>
+                    <li>Statements by David Sacks on AI Policy, 2025.</li>
+                </ul>
+            </div>
+
+            <div class="disclaimer-section">
+                <h4>Disclaimer</h4>
+                <p>
+                    <em>This report is a work of political satire based on real news events. The analysis and humorous commentary reflect the fictional persona of Edward “The Professor” Miller and should not be interpreted as factual claims beyond the referenced reporting. Always check the facts—because clearly, nobody else will.</em>
+                </p>
+            </div>
+
+            <div class="article-meta">
+                <span>By: Edward “The Professor” Miller</span>
+                <span class="publication-date">Dumbland News</span>
+            </div>
+        </div>
+    </article>
+</div>
+
+
+
+
+
+
+
+
+<!-- hasta aqui -->
+
+    <div id="articles-grid"></div>
+    <div id="latest-news"></div>
+  </main>
+
+  <aside id="sidebar" class="sidebar"></aside>
+</div>
+
+  <div id="footer"></div>
+
+  <script>
+    async function loadSection(id, file) {
+      const response = await fetch(file);
+      const html = await response.text();
+      document.getElementById(id).innerHTML = html;
+    }
+
+    loadSection("header", "../../header.html");
+    loadSection("hero", "../../hero.html");
+    loadSection("articles-grid", "../../articles-grid.html");
+    loadSection("latest-news", "../../latest-news.html");
+    loadSection("sidebar", "../../sidebar.html");
+    loadSection("footer", "../../footer.html");
+  </script>
+
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+  <script type="module" src="../../dist/app.js"></script>
+  <script type="module" src="../../dist/clock.js"></script>
+  <script type="module" src="../../dist/search.js"></script>
+  <script type="module" src="../../dist/language.js"></script>
+</body>
+</html>

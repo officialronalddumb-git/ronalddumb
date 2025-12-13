@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dumbland News - The Most Accurate Report by Mary “Bullet” Johnson</title>
+
+  <link rel="stylesheet" href="../../css/main.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+
+<body>
+
+  <div id="header"></div>
+  
+  <div class="container main-layout">
+  <main class="main-content">
+
+<!-- Aqui se comienza a agregar la noticia -->
+
+
+
+
+
+
+
+
+<div class="full-news-page">
+    <article class="news-article">
+        <!-- <img src="assets/images/news/in-n-out-67-ban.png" alt="In-N-Out removes number 67 due to viral trend" class="full-article-image"> -->
+        
+        <div class="article-content">
+            <span class="category">Society / Viral Culture</span>
+            
+            <h2>In‑N‑Out Silences “67”: Teens, TikTok, and the Number That Flew Too Close to the Sun</h2>
+            
+            <div class="article-meta">
+                <span>By: Sergéi Volkov</span>
+                <span class="date">Dec 12, 2025</span>
+            </div>
+
+            <p class="introduction">
+                Good evening, dear viewers. Sergéi Volkov reporting for <em>Dumbland News</em>, your favorite source of rigorous journalism sprinkled with just enough sarcasm to keep you awake. Tonight’s story involves a fast‑food chain, a rogue integer, and a swarm of teenagers who apparently believe that throwing French fries is a form of cultural expression. Welcome to Dumbland — where even numbers can be canceled.
+            </p>
+
+            <h3>The Report</h3>
+            
+            <p>
+                In‑N‑Out Burger, beloved by adolescents and tolerated by adults who have given up on cholesterol management, has officially removed the number <strong>67</strong> from its ordering system. Yes, the number between 66 and 68 has been exiled, as if it committed a felony instead of simply existing. The reason? A viral TikTok trend that transformed the humble “67” into a battle cry for chaotic teenage celebrations.
+            </p>
+
+            <p>
+                Viral videos show crowds of kids waiting for the number to be called, only to erupt into cheers, screams, and what employees describe as “food‑based weather events.” At a Phoenix location, worker Marina Bastidas reported that teens would throw food into the air whenever “67” echoed through the intercom. “It was chaotic,” she said — which is polite employee‑speak for “I now fear ketchup packets.”
+            </p>
+
+            <p>
+                The trend traces back to the phrase “6‑7,” associated with basketball player LaMelo Ball and originating from Skrilla’s drill rap track <em>Doot Doot</em>. The lyric became a meme, then a TikTok phenomenon, then — because this is America — a logistical nightmare for a burger chain. Some claim “6‑7” references Chicago’s 67th Street; others say it’s a police code. Either way, it’s now the reason In‑N‑Out’s order system jumps straight from 66 to 68, like a hotel pretending the 13th floor doesn’t exist.
+            </p>
+
+            <p>
+                TikToker Taylen Kinney, known as @taylen_01, added fuel to the fire by using the phrase in videos accompanied by a hand gesture that looks like someone trying to summon a confused pigeon. Naturally, millions of teenagers copied it. Naturally, they brought it to In‑N‑Out. Naturally, capitalism was not prepared.
+            </p>
+
+            <p>
+                Employees confirmed the number has been gone for about a month. People Magazine first reported the change, and since then, the internet has reacted with its usual blend of outrage, confusion, and memes. Some on the political right have declared the removal of 67 an attack on “traditional numbering values,” while a few on the left insist it’s a symbolic erasure of youth culture. Meanwhile, the rest of us are just trying to eat our burgers without being hit by airborne fries.
+            </p>
+
+            <p>
+                The situation raises a deeper question: how long before another number falls victim to meme culture? Will 42 be banned for causing existential crises? Will 420 be outlawed for being too chill? Will 1 be removed because it’s “too lonely”? Only TikTok knows — and TikTok never warns us.
+            </p>
+
+            <h3>Conclusion</h3>
+            
+            <p>
+                In‑N‑Out’s decision to ban “67” may seem absurd, but it reflects a modern truth: the internet can turn anything — songs, gestures, numbers — into cultural flashpoints. For now, the number rests in exile, a fallen hero of the digital age. Perhaps one day it will return, when teenagers rediscover the ancient art of sitting quietly and eating their food. But let’s be honest — that’s less likely than In‑N‑Out adding a vegan menu.
+            </p>
+
+            <div class="references-section">
+                <h4>References</h4>
+                <ul>
+                    <li>Arizona Republic reporting by Reia Li and Dina Kaur, Dec 12, 2025.</li>
+                    <li>People Magazine coverage on the removal of order number 67.</li>
+                    <li>KABC News report, Dec 9, 2025.</li>
+                    <li>Public TikTok content related to the “6‑7” trend.</li>
+                </ul>
+            </div>
+
+            <div class="disclaimer-section">
+                <h4>Disclaimer</h4>
+                <p>
+                    <em>This report is a work of satire. All factual references are drawn from publicly available news sources. The analysis and humorous commentary reflect the fictional style of Sergéi Volkov, not the official position of Dumbland News (which, for legal clarity, does not exist). If you feel offended, please remember: satire is calorie‑free and significantly cheaper than therapy.</em>
+                </p>
+            </div>
+
+            <div class="article-meta">
+                <span>By: Sergéi Volkov</span>
+                <span class="publication-date">Dumbland News</span>
+            </div>
+        </div>
+    </article>
+</div>
+
+
+
+
+
+
+
+<!-- hasta aqui -->
+
+    <div id="articles-grid"></div>
+    <div id="latest-news"></div>
+  </main>
+
+  <aside id="sidebar" class="sidebar"></aside>
+</div>
+
+  <div id="footer"></div>
+
+  <script>
+    async function loadSection(id, file) {
+      const response = await fetch(file);
+      const html = await response.text();
+      document.getElementById(id).innerHTML = html;
+    }
+
+    loadSection("header", "../../header.html");
+    loadSection("hero", "../../hero.html");
+    loadSection("articles-grid", "../../articles-grid.html");
+    loadSection("latest-news", "../../latest-news.html");
+    loadSection("sidebar", "../../sidebar.html");
+    loadSection("footer", "../../footer.html");
+  </script>
+
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+  <script type="module" src="../../dist/app.js"></script>
+  <script type="module" src="../../dist/clock.js"></script>
+  <script type="module" src="../../dist/search.js"></script>
+  <script type="module" src="../../dist/language.js"></script>
+</body>
+</html>

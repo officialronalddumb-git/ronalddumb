@@ -34,3 +34,43 @@
     display: block;
     border: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Selector de plataformas */
+.video-platform-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.video-platform-selector button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    background: #444;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.video-platform-selector button:hover {
+    background: #666;
+}
+
+.video-platform-selector button.active {
+    background: #d32f2f;
+}

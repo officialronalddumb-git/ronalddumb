@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dumbland News - The Most Accurate Report by Mary “Bullet” Johnson</title>
+
+  <link rel="stylesheet" href="../../css/main.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+
+<body>
+
+  <div id="header"></div>
+  
+  <div class="container main-layout">
+  <main class="main-content">
+
+<!-- Aqui se comienza a agregar la noticia -->
+
+
+
+
+
+
+
+<div class="full-news-page">
+    <article class="news-article">
+        <img src="assets/images/news/cristmas-venezuela.png" alt="Maduro declares 2026 early in Venezuela" class="full-article-image">
+        
+        <div class="article-content">
+            <span class="category">International Politics / Venezuela</span>
+            
+            <h2>Venezuela Declares 2026 Early: Maduro Fast‑Forwards the Calendar Amid Rising U.S. Pressure</h2>
+            
+            <div class="article-meta">
+                <span>By: Mary “Bullet” Johnson</span>
+                <span class="date">Dec 12, 2025</span>
+            </div>
+
+            <p class="introduction">
+                Good evening, readers. Mary “Bullet” Johnson reporting for <em>Dumbland News</em>. Tonight’s story comes from Venezuela, where President Nicolás Maduro has decided that time is optional, calendars are negotiable, and the year 2026 has already begun — nineteen days early. Yes, welcome to Latin American politics, where reality is flexible and symbolism is a national sport.
+            </p>
+
+            <h3>The Report</h3>
+            
+            <p>
+                The announcement came during a televised press conference in which Maduro declared, with the confidence of a man who has never lost an argument with a clock, that “2026 has already started.” Just like that. No need for astronomers, timekeepers, or the Gregorian calendar. When you run a country, apparently you also run the space‑time continuum.
+            </p>
+            
+            <p>
+                Maduro explained that the early start would allow Venezuela to “get ahead” of the rest of the world — a bold claim for a nation that has spent years trying to catch up with itself. But hey, who among us hasn’t wanted to skip the last two weeks of December? Especially the part where the economy reminds you it exists.
+            </p>
+            
+            <p>
+                This isn’t the first time Maduro has played with the holiday schedule. Christmas was also moved up by decree earlier this year, a tradition that now feels less like festive cheer and more like a presidential hobby. Some leaders play golf. Others rewrite the calendar. Everyone needs an outlet.
+            </p>
+            
+            <p>
+                But the timing is no coincidence. The declaration comes amid rising tensions with the United States. Washington has deployed military assets to the Caribbean, carried out operations against alleged drug‑trafficking boats, and seized a Venezuelan oil tanker. Maduro linked these events to “external threats,” praising the “perfect fusion” of the Venezuelan people, military, and police. Because nothing says “peace” like talking about threats every five minutes.
+            </p>
+
+            <p>
+                Meanwhile, U.S. President Donald Trump has publicly stated that Maduro’s “days are numbered,” a phrase that probably didn’t help anyone’s blood pressure. Maduro insists Washington wants a “regime change” to seize Venezuela’s oil — a claim that, historically speaking, is not exactly far‑fetched. The right loves oil the way the left loves committees: passionately and with questionable efficiency.
+            </p>
+
+            <p>
+                Brazilian President Luiz Inácio Lula da Silva also joined the diplomatic ping‑pong, confirming he recently spoke with Maduro about peace in South America. Lula says he told Trump that Latin America doesn’t want war. Trump allegedly replied, “But I have more weapons, more ships, more bombs.” A statement that sounds less like diplomacy and more like a kid bragging about his toy collection — except the toys explode.
+            </p>
+
+            <p>
+                Back in Caracas, Maduro unveiled his “Plan 2026,” a seven‑point strategy ranging from communal planning to national defense. Critics note that Venezuela has produced more plans than results in recent years, but perhaps declaring the year early will help the progress arrive early too. Or at least the speeches.
+            </p>
+
+            <p>
+                Despite the grand declarations, nothing has changed legally. The Venezuelan calendar remains the same as everywhere else: 2026 begins on January 1. No documents have been altered, no international body has recognized the shift, and no clocks have been harmed in the making of this political theater. It’s symbolism — a motivational poster disguised as a presidential decree.
+            </p>
+
+            <h3>Conclusion</h3>
+            
+            <p>
+                Whether Venezuela is truly living in 2026 or simply pretending to, one thing is clear: time has become a political instrument in Caracas. In a region where tensions are rising and leaders are trading verbal grenades, fast‑forwarding the year may be less about optimism and more about survival. For now, the world marches toward January while Venezuela sprints into a future of its own design — or at least its own narrative.
+            </p>
+
+            <div class="references-section">
+                <h4>References</h4>
+                <ul>
+                    <li>Declaraciones oficiales del gobierno de Venezuela transmitidas por medios estatales.</li>
+                    <li>Reportes de agencias internacionales (AP, AFP) sobre tensiones entre Venezuela y Estados Unidos.</li>
+                    <li>Información pública sobre el “Plan 2026” presentada por el gobierno venezolano.</li>
+                    <li>Declaraciones recientes de Donald Trump y Luiz Inácio Lula da Silva.</li>
+                </ul>
+            </div>
+
+            <div class="disclaimer-section">
+                <h4>Disclaimer</h4>
+                <p>
+                    <em>This report is a work of political satire based on real events reported by reputable international media. The analysis and humorous commentary reflect the fictional style of Mary “Bullet” Johnson and are not the official position of Dumbland News (which, for the record, does not exist). If this offended you, remember: satire is cheaper than therapy.</em>
+                </p>
+            </div>
+
+            <div class="article-meta">
+                <span>By: Mary “Bullet” Johnson</span>
+                <span class="publication-date">Dumbland News</span>
+            </div>
+        </div>
+    </article>
+</div>
+
+
+
+
+
+
+
+
+<!-- hasta aqui -->
+
+    <div id="articles-grid"></div>
+    <div id="latest-news"></div>
+  </main>
+
+  <aside id="sidebar" class="sidebar"></aside>
+</div>
+
+  <div id="footer"></div>
+
+  <script>
+    async function loadSection(id, file) {
+      const response = await fetch(file);
+      const html = await response.text();
+      document.getElementById(id).innerHTML = html;
+    }
+
+    loadSection("header", "../../header.html");
+    loadSection("hero", "../../hero.html");
+    loadSection("articles-grid", "../../articles-grid.html");
+    loadSection("latest-news", "../../latest-news.html");
+    loadSection("sidebar", "../../sidebar.html");
+    loadSection("footer", "../../footer.html");
+  </script>
+
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>
+  <script type="module" src="../../dist/app.js"></script>
+  <script type="module" src="../../dist/clock.js"></script>
+  <script type="module" src="../../dist/search.js"></script>
+  <script type="module" src="../../dist/language.js"></script>
+</body>
+</html>

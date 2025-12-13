@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Videos de Dumbland - La Verdadera Visión de Ronald Dumb</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dumbland News - El Reportaje Más Verdadero por Ronald Dumb</title>
+
+  <link rel="stylesheet" href="../../css/main.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
+
 <body>
-    <header class="main-header">
-        <div class="container">
-            <h1 class="site-title">
-                <a href="index.html">DUMBLAND NEWS</a>
-            </h1>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="videos.html">Videos</a></li>
-                    <li><a href="about.html">Ronald Dumb</a></li>
-                    <li><a href="shop.html">Tienda</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
-                    <li><a href="#" class="btn btn-donate">Donar Ahora</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+
+  <div id="header"></div>
+  
+  <div class="container main-layout">
+  <main class="main-content">
+
+<!-- Aqui se comienza a agregar la noticia -->
+
+
+
+
+
+
+
+
 
     <main class="container main-content">
         <section class="page-header">
-            <h2>Videos Oficiales de Dumbland</h2>
-            <p>Descubre la verdad, la única verdad, directamente de la fuente más confiable: Ronald Dumb.</p>
+            <h2>Official Dumbland Videos</h2>
+            <p>Discover the truth, the one true truth, straight from the most reliable source: Ronald Dumb.</p>
         </section>
 
         <section class="featured-video">
@@ -97,17 +100,50 @@
         </section>
     </main>
 
-    <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2023 Dumbland News. Todos los derechos reservados por la Presidencia de Ronald Dumb.</p>
-            <div class="social-links">
-                <a href="#" target="_blank">YouTube</a> |
-                <a href="#" target="_blank">Otras Plataformas de Video</a> |
-                <a href="#" target="_blank">Twitter/X</a>
-            </div>
-        </div>
-    </footer>
 
-    <script src="dist/app.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<!-- hasta aqui -->
+
+
+    <div id="articles-grid"></div>
+    <div id="latest-news"></div>
+  </main>
+
+  <!-- Sidebar contenedor -->
+  <aside id="sidebar" class="sidebar"></aside>
+</div>
+
+  <div id="footer"></div>
+
+  <script>
+    async function loadSection(id, file) {
+      const response = await fetch(file);
+      const html = await response.text();
+      document.getElementById(id).innerHTML = html;
+    }
+
+    loadSection("header", "../../header.html");
+    loadSection("hero", "../../hero.html");
+    
+    loadSection("latest-news", "../../latest-news.html");
+    loadSection("sidebar", "../../sidebar.html");
+    loadSection("footer", "../../footer.html");
+  </script>
+
+  <script type="module" src="../../dist/app.js"></script>
+  <script type="module" src="../../dist/clock.js"></script>
+  <script type="module" src="../../dist/search.js"></script>
+  <script type="module" src="../../dist/language.js"></script>
+
 </body>
 </html>

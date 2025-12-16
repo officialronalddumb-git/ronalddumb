@@ -4,6 +4,8 @@
 // Importamos las funciones lógicas desde los otros archivos
 import { setupSearchFunctionality } from './search';
 import { setupLanguageSelector } from './language';
+import { setupVideoPlatformSelector } from './video-selector';
+
 
 // 2. INTERFACES Y DATOS
 // Definición de una interfaz para los datos de un artículo de noticias
@@ -134,6 +136,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // E. Configurar otras secciones
     setupContactForm();
+
+    // F. Configurar la parte de la parte selectora de videos
+    setupVideoPlatformSelector();
+
 
     // Listener para botón Donar
     const donateButton = document.querySelector('.btn-donate');

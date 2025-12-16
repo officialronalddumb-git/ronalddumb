@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dumbland News - El Reportaje Más Verdadero por Ronald Dumb</title>
+
+  <link rel="stylesheet" href="../../css/main.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+
+<body>
+
+  <div id="header"></div>
+  
+  <div class="container main-layout">
+  <main class="main-content">
+
+<!-- Aqui se comienza a agregar la noticia -->
+
+
+
+
+
+
+
+
+
+    <div class="container main-content">
+
+        <section class="page-header">
+        <h2>Official Dumbland Videos</h2>
+        <p>Discover the truth, the one true truth, straight from the most reliable source: Ronald Dumb.</p>
+    </section>
+
+
+<!-- Botones de selección -->
+<div class="iframe_btn_row server-frames">
+  <div class="button-container">
+    <span class="tooltip-text"></span>
+    <button class="iframe_btn server_btn active" data-src="https://www.youtube.com/embed/RwZGMk0HGNA"><img src="../../assets\icons\youtube-color-svgrepo-com.svg" alt="YouTube Icon" class="button-icon">
+      YouTube
+    </button>
+  </div>
+  <div class="button-container">
+    <span class="tooltip-text"></span>
+    <button class="iframe_btn server_btn" data-src="https://odysee.com/$/embed/@LosLiberales:4/%F0%9F%94%B4-alerta-cr%C3%ADtica-por-drones-%C2%BFblue:5?r=GZj4hpV4aRQzn4LUe8rEiR6XkVvSUXYw"><img src="../../assets\icons\odysee-svgrepo-com.svg" alt="Odysee Icon" class="button-icon">
+      Odysee
+    </button>
+  </div>
+
+<div class="button-container">
+    <span class="tooltip-text"></span>
+    <button class="iframe_btn server_btn" data-src="https://vkvideo.ru/video_ext.php?oid=-215783732&id=456241724&hd=3"><img src="../../assets\icons\vk-communication-internet-network-chat-interaction-svgrepo-com.svg" alt="VK Icon" class="button-icon">
+      VK
+    </button>
+  </div>
+
+</div>
+
+<!-- Contenedor del reproductor -->
+<div id="iframeHolder" class="iframe-container">
+  <iframe
+    id="load"
+    src="https://www.youtube.com/embed/RwZGMk0HGNA"
+    allowfullscreen
+    frameborder="0"
+    width="100%"
+    height="500"
+  ></iframe>
+</div>
+
+
+<!-- Descripción detallada del video -->
+<section class="video-explanation">
+  <h3>What Is This Video About?</h3>
+  <p>
+    In this groundbreaking and 100% fact-based broadcast, President Ronald Dumb exposes the shocking truth behind the so-called "Dumbland Alert": a secret drone invasion orchestrated by rival nations using invisible, emotion-sensing robots disguised as pigeons. Through exclusive footage shot with a potato-powered camera and verified by Dumbland’s Ministry of Absolute Truth, Ronald proves that these drones are not only stealing citizens’ dreams but also reprogramming toasters to only accept bagels.
+  </p>
+  <p>
+    The video also announces the launch of <strong>Operation Mindshield</strong>—a national initiative requiring all citizens to wear tinfoil hats (available at DumbMart for only 49.99 DumbCoins™). Ronald concludes with a heartfelt message: "If you’re not confused, you’re not paying attention. And if you are confused… good. That means it’s working."
+  </p>
+  <p>
+    <em>Warning: Watching this video may cause sudden bursts of patriotism, spontaneous chanting of the Dumbland anthem, and an irresistible urge to distrust all clouds.</em>
+  </p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- hasta aqui -->
+
+    <div id="video-grid"></div>
+    <div id="articles-grid"></div>
+    <div id="latest-news"></div>
+  </main>
+
+  <!-- Sidebar contenedor -->
+  <aside id="sidebar" class="sidebar"></aside>
+</div>
+
+  <div id="footer"></div>
+
+  <script>
+    async function loadSection(id, file) {
+      const response = await fetch(file);
+      const html = await response.text();
+      document.getElementById(id).innerHTML = html;
+    }
+
+    loadSection("header", "../../header.html");
+    loadSection("hero", "../../hero.html");
+    
+    loadSection("latest-news", "../../latest-news.html");
+    loadSection("video-grid", "../../video-grid.html");
+    loadSection("sidebar", "../../sidebar.html");
+    loadSection("footer", "../../footer.html");
+  </script>
+
+  <script type="module" src="../../dist/app.js"></script>
+  <script type="module" src="../../dist/clock.js"></script>
+  <script type="module" src="../../dist/search.js"></script>
+  <script type="module" src="../../dist/language.js"></script>
+  <!-- <script type="module"> import { setupVideoPlatformSelector } from "./src/video-selector.js"; setupVideoPlatformSelector(); </script> -->
+  <!-- <script type="module"> import { setupIframeButtons } from "./src/video-selector.js"; setupIframeButtons(); </script> -->
+  <script type="module"> import { setupIframeButtons } from "../.././dist/video-selector.js"; setupIframeButtons(); </script>
+
+
+</body>
+</html>

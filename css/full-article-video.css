@@ -4,59 +4,56 @@
  * los artículos individuales sea responsivo y ocupe el ancho completo.
  */
 
+
+
+
 /* Contenedor que establece la relación de aspecto (16:9) */
-.video-container {
+
     /* Define la posición relativa para que los hijos absolutos (el video) se posicionen respecto a él */
+    /* Necesario para que el padding-bottom controle la altura */
+    /* Truco de responsive: padding-bottom = (9 / 16) * 100 = 56.25% */
+    /* Esto obliga al contenedor a tener una altura proporcional al ancho */
+    /* Sutil sombra para destacarlo */
+/*.video-container {
     position: relative;
     width: 100%;
     
-    /* Truco de responsive: padding-bottom = (9 / 16) * 100 = 56.25% */
-    /* Esto obliga al contenedor a tener una altura proporcional al ancho */
+    
     padding-bottom: 56.25%; 
     
-    height: 0; /* Necesario para que el padding-bottom controle la altura */
+    height: 0; 
     overflow: hidden;
     margin-top: 20px;
     margin-bottom: 20px;
     background-color: #000;
     border-radius: 5px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sutil sombra para destacarlo */
-}
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+} */
+
+
 
 /* El elemento <video> en sí mismo */
-.full-article-video {
-    /* Ocupa todo el espacio del contenedor padre */
+ /* Ocupa todo el espacio del contenedor padre */
+/*.full-article-video {
+   
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: block;
-    border: none;
-}
 
-
-
-
-
-
-
-
-
-
-
-
-
+    border: 0;
+}*/
 
 
 /* Selector de plataformas */
-.video-platform-selector {
+/*.video-platform-selector {
     display: flex;
     gap: 10px;
     margin-bottom: 10px;
-}
+}*/
 
-.video-platform-selector button {
+/*.video-platform-selector button {
     padding: 8px 14px;
     border: none;
     border-radius: 4px;
@@ -73,4 +70,138 @@
 
 .video-platform-selector button.active {
     background: #d32f2f;
+}
+
+
+
+.video-platform-selector button img {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+*/
+
+
+
+
+
+
+
+
+/*  codigo que yo agregue al reproductor de video   */
+
+
+.iframe_btn_row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.button-container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tooltip-text {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 4px;
+}
+
+.iframe_btn {
+    padding: 8px 16px;
+    background: #444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.iframe_btn:hover {
+    background: #666;
+}
+
+.iframe_btn.active {
+    background: #5bc05e;
+}
+
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    background: #000;
+    border-radius: 8px;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/*  FINAL DE CODIGO codigo al reproductor de video  */
+
+
+/* Nuevo CSS para alinear el icono y el texto dentro del botón */
+.iframe_btn {
+    /* Mantener padding y estilos anteriores */
+    padding: 8px 16px;
+    background: #444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+    
+    /* 💥 CAMBIO CLAVE: Usa Flexbox para alinear el contenido */
+    display: flex; 
+    align-items: center; /* Alineación vertical */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+/* Estilo para la imagen del icono */
+.iframe_btn .button-icon {
+    width: 20px; /* Tamaño del icono */
+    height: 20px;
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+    filter: invert(100%); /* Opcional: Si el SVG es negro, lo hace blanco */
+}
+
+/* Estilo del texto del video */
+.video-explanation {
+  margin: 2rem 0;
+  padding: 1.2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-green);
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.7;
+  color: #2c3e50;
+}
+
+.video-explanation h3 {
+  margin-top: 0;
+  color: var(--primary-blue);
+  font-size: 1.35rem;
+}
+
+.video-explanation p {
+  margin-bottom: 1rem;
+}
+
+.video-explanation em {
+  color: solid var(--light-gray);
+  font-style: italic;
 }

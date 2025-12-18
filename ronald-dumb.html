@@ -18,13 +18,30 @@
   
   <div class="container main-layout">
   <main class="main-content">
-    <div id="hero"></div>
+
+<!-- Aqui se comienza a agregar la noticia -->
+
+
+
+<div id="dumbland-history"></div>
+
+<div style="height: 50px;"></div>
+
+<div id="ronalddumb-history"></div>
+
+
+
+
+
+<!-- hasta aqui -->
+
+    <div id="video-grid"></div>
     <div id="articles-grid"></div>
     <div id="latest-news"></div>
   </main>
 
   <!-- Sidebar contenedor -->
-  <aside id="sidebar" class="sidebar"></aside>
+    <aside id="sidebar" class="sidebar"></aside> 
 </div>
 
   <div id="footer"></div>
@@ -37,9 +54,15 @@
     }
 
     loadSection("header", "/ronalddumb/header.html");
-    loadSection("hero", "/ronalddumb/hero.html");
-    loadSection("articles-grid", "/ronalddumb/articles-grid.html");
+    
+
+    loadSection("dumbland-history", "/ronalddumb/news-vid/ronald-dumb/dumbland-history.html");
+    loadSection("ronalddumb-history", "/ronalddumb/news-vid/ronald-dumb/ronald-dumb-history.html");
+
+
+
     loadSection("latest-news", "/ronalddumb/latest-news.html");
+    loadSection("video-grid", "/ronalddumb/video-grid.html");
     loadSection("sidebar", "/ronalddumb/sidebar.html");
     loadSection("footer", "/ronalddumb/footer.html");
   </script>
@@ -48,5 +71,10 @@
   <script type="module" src="/ronalddumb/dist/clock.js"></script>
   <script type="module" src="/ronalddumb/dist/search.js"></script>
   <script type="module" src="/ronalddumb/dist/language.js"></script>
+  <!-- <script type="module"> import { setupVideoPlatformSelector } from "./src/video-selector.js"; setupVideoPlatformSelector(); </script> -->
+  <!-- <script type="module"> import { setupIframeButtons } from "./src/video-selector.js"; setupIframeButtons(); </script> -->
+  <script type="module"> import { setupIframeButtons } from "/ronalddumb/dist/video-selector.js"; setupIframeButtons(); </script>
+
+
 </body>
 </html>

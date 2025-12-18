@@ -14,7 +14,7 @@
     /* Truco de responsive: padding-bottom = (9 / 16) * 100 = 56.25% */
     /* Esto obliga al contenedor a tener una altura proporcional al ancho */
     /* Sutil sombra para destacarlo */
-/*.video-container {
+.video-container {
     position: relative;
     width: 100%;
     
@@ -28,13 +28,13 @@
     background-color: #000;
     border-radius: 5px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-} */
+} 
 
 
 
 /* El elemento <video> en sí mismo */
  /* Ocupa todo el espacio del contenedor padre */
-/*.full-article-video {
+.full-article-video {
    
     position: absolute;
     top: 0;
@@ -43,7 +43,7 @@
     height: 100%;
 
     border: 0;
-}*/
+}
 
 
 /* Selector de plataformas */
@@ -171,13 +171,22 @@
     justify-content: center; /* Centrar horizontalmente */
 }
 
-/* Estilo para la imagen del icono */
+/* Estilo para la imagen del icono que esta dentro de un contenedor*/
 .iframe_btn .button-icon {
     width: 20px; /* Tamaño del icono */
     height: 20px;
     margin-right: 8px; /* Espacio entre el icono y el texto */
     filter: invert(100%); /* Opcional: Si el SVG es negro, lo hace blanco */
 }
+
+/* Estilo para la imagen del icono que no esta encerrada en un contenedor*/
+.button-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
+  display: block;
+}
+
 
 /* Estilo del texto del video */
 .video-explanation {
@@ -205,3 +214,4 @@
   color: solid var(--light-gray);
   font-style: italic;
 }
+

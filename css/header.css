@@ -194,3 +194,87 @@
         font-size: 2em;
     }
 }
+
+
+
+
+/* Dropdown principal */
+.main-nav li.dropdown {
+    position: relative;
+    /* Elimina padding-bottom aquí si no es necesario */
+}
+
+/* Contenedor del submenú */
+.main-nav .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--primary-blue);
+    border: 2px solid var(--accent-green);
+    border-radius: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0; /* ← ¡Elimina el margin-top! */
+    min-width: 180px;
+    z-index: 999;
+    /* Opcional: suavizado visual */
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    opacity: 0;
+    transform: translateY(-5px);
+    pointer-events: none;
+}
+
+/* Mostrar submenú al hacer hover */
+.main-nav li.dropdown:hover .submenu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Estilo de los enlaces */
+.main-nav .submenu li a {
+    padding: 10px 15px;
+    color: var(--white);
+    font-weight: 500;
+    display: block;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.main-nav .submenu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--accent-green);
+}
+
+/* Flecha */
+.main-nav .arrow {
+    font-size: 0.7em;
+    margin-left: 5px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.main-nav li.dropdown:hover .arrow {
+    color: var(--accent-green);
+    transform: rotate(180deg);
+}
+
+/* Responsive (móviles) */
+@media (max-width: 768px) {
+    .main-nav .submenu {
+        position: static;
+        border: none;
+        background-color: var(--primary-blue);
+        margin: 0;
+        width: 100%;
+        opacity: 1 !important;
+        transform: none !important;
+        pointer-events: auto !important;
+    }
+
+    .main-nav li.dropdown:hover .submenu {
+        display: block;
+    }
+}

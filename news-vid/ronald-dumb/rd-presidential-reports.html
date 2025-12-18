@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dumbland News - El Reportaje Más Verdadero por Ronald Dumb</title>
 
-  <link rel="stylesheet" href="/ronalddumb/css/main.css">
+  <link rel="stylesheet" href="../../css/main.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -29,10 +29,15 @@
 
 
 
+
+
+
+
+
     <div class="container main-content">
 
         <section class="page-header">
-        <h2>Official Dumbland Videos</h2>
+        <h2>Presidential address</h2>
         <p>Discover the truth, the one true truth, straight from the most reliable source: Ronald Dumb.</p>
     </section>
 
@@ -41,20 +46,20 @@
 <div class="iframe_btn_row server-frames">
   <div class="button-container">
     <span class="tooltip-text"></span>
-    <button class="iframe_btn server_btn active" data-src="https://www.youtube.com/embed/RwZGMk0HGNA"><img src="assets\icons\youtube-color-svgrepo-com.svg" alt="YouTube Icon" class="button-icon">
+    <button class="iframe_btn server_btn active" data-src="https://www.youtube.com/embed/RwZGMk0HGNA"><img src="../../assets\icons\youtube-color-svgrepo-com.svg" alt="YouTube Icon" class="button-icon">
       YouTube
     </button>
   </div>
   <div class="button-container">
     <span class="tooltip-text"></span>
-    <button class="iframe_btn server_btn" data-src="https://odysee.com/$/embed/@LosLiberales:4/%F0%9F%94%B4-alerta-cr%C3%ADtica-por-drones-%C2%BFblue:5?r=GZj4hpV4aRQzn4LUe8rEiR6XkVvSUXYw"><img src="assets\icons\odysee-svgrepo-com.svg" alt="Odysee Icon" class="button-icon">
+    <button class="iframe_btn server_btn" data-src="https://odysee.com/$/embed/@LosLiberales:4/%F0%9F%94%B4-alerta-cr%C3%ADtica-por-drones-%C2%BFblue:5?r=GZj4hpV4aRQzn4LUe8rEiR6XkVvSUXYw"><img src="../../assets\icons\odysee-svgrepo-com.svg" alt="Odysee Icon" class="button-icon">
       Odysee
     </button>
   </div>
 
 <div class="button-container">
     <span class="tooltip-text"></span>
-    <button class="iframe_btn server_btn" data-src="https://vkvideo.ru/video_ext.php?oid=-215783732&id=456241724&hd=3"><img src="assets\icons\vk-communication-internet-network-chat-interaction-svgrepo-com.svg" alt="VK Icon" class="button-icon">
+    <button class="iframe_btn server_btn" data-src="https://vkvideo.ru/video_ext.php?oid=-215783732&id=456241724&hd=3"><img src="../../assets\icons\vk-communication-internet-network-chat-interaction-svgrepo-com.svg" alt="VK Icon" class="button-icon">
       VK
     </button>
   </div>
@@ -111,10 +116,10 @@
 
 
 <!-- hasta aqui -->
-
-    <div id="video-grid"></div>
-    <div id="articles-grid"></div>
-    <div id="latest-news"></div>
+    <div id="pr-grid"></div>
+    <!-- <div id="video-grid"></div> -->
+    <!-- <div id="articles-grid"></div> -->
+    
   </main>
 
   <!-- Sidebar contenedor -->
@@ -131,22 +136,23 @@
       document.getElementById(id).innerHTML = html;
     }
 
-    loadSection("header", "/ronalddumb/header.html");
-    loadSection("hero", "/ronalddumb/hero.html");
+    loadSection("header", "../../header.html");
+    /*  loadSection("hero", "../../hero.html");  */
     
-    loadSection("latest-news", "/ronalddumb/latest-news.html");
-    loadSection("video-grid", "/ronalddumb/video-grid.html");
-    loadSection("sidebar", "/ronalddumb/sidebar.html");
-    loadSection("footer", "/ronalddumb/footer.html");
+    /* loadSection("latest-news", "../../latest-news.html"); */
+    /* loadSection("video-grid", "../../video-grid.html"); */
+    loadSection("pr-grid", "/news-vid/ronald-dumb/presidential-address/pr-grid.html");
+    loadSection("sidebar", "/sidebar.html");
+    loadSection("footer", "/footer.html");
   </script>
 
-  <script type="module" src="/ronalddumb/dist/app.js"></script>
-  <script type="module" src="/ronalddumb/dist/clock.js"></script>
-  <script type="module" src="/ronalddumb/dist/search.js"></script>
-  <script type="module" src="/ronalddumb/dist/language.js"></script>
+  <script type="module" src="/dist/app.js"></script>
+  <script type="module" src="/dist/clock.js"></script>
+  <script type="module" src="/dist/search.js"></script>
+  <script type="module" src="/dist/language.js"></script>
   <!-- <script type="module"> import { setupVideoPlatformSelector } from "./src/video-selector.js"; setupVideoPlatformSelector(); </script> -->
   <!-- <script type="module"> import { setupIframeButtons } from "./src/video-selector.js"; setupIframeButtons(); </script> -->
-  <script type="module"> import { setupIframeButtons } from "/ronalddumb/dist/video-selector.js"; setupIframeButtons(); </script>
+  <script type="module"> import { setupIframeButtons } from "/dist/video-selector.js"; setupIframeButtons(); </script>
 
 
 </body>

@@ -20,7 +20,11 @@
   
   <div class="container main-layout">
   <main class="main-content">
-    <div id="hero"></div>
+
+    <!-- <div id="hero"></div> -->
+    <div id="slider"></div>
+
+
     <div id="articles-grid"></div>
     <div id="latest-news"></div>
   </main>
@@ -32,23 +36,32 @@
   <div id="footer"></div>
 
   <script>
-    async function loadSection(id, file) {
-      const response = await fetch(file);
-      const html = await response.text();
-      document.getElementById(id).innerHTML = html;
-    }
+  async function loadSection(id, file) {
+    const response = await fetch(file);
+    const html = await response.text();
+    document.getElementById(id).innerHTML = html;
 
-    loadSection("header", "/ronalddumb/header.html");
-    loadSection("hero", "/ronalddumb/hero.html");
-    loadSection("articles-grid", "/ronalddumb/articles-grid.html");
-    loadSection("latest-news", "/ronalddumb/latest-news.html");
-    loadSection("sidebar", "/ronalddumb/sidebar.html");
-    loadSection("footer", "/ronalddumb/footer.html");
-  </script>
+    //  Cambio agregado: inicializar el slider cuando se cargue su HTML
+    if (id === "slider" && typeof initSlider === "function") {
+      initSlider();
+    }
+  }
+
+  loadSection("header", "/ronalddumb/header.html");
+  loadSection("hero", "/ronalddumb/hero.html");
+  loadSection("articles-grid", "/ronalddumb/articles-grid.html");
+  loadSection("latest-news", "/ronalddumb/latest-news.html");
+  loadSection("sidebar", "/ronalddumb/sidebar.html");
+  loadSection("footer", "/ronalddumb/footer.html");
+  loadSection("slider", "/ronalddumb/slider.html");
+</script>
+
 
   <script type="module" src="/ronalddumb/dist/app.js"></script>
   <script type="module" src="/ronalddumb/dist/clock.js"></script>
   <script type="module" src="/ronalddumb/dist/search.js"></script>
   <script type="module" src="/ronalddumb/dist/language.js"></script>
+  <script type="module" src="/ronalddumb/dist/slider.js"></script>
+
 </body>
 </html>

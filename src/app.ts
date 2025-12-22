@@ -4,7 +4,7 @@
 // Importamos las funciones lógicas desde los otros archivos
 import { setupSearchFunctionality } from './search';
 import { setupLanguageSelector } from './language';
-import { setupVideoPlatformSelector } from './video-selector';
+import { setupIframeButtons  } from './video-selector';
 
 
 // 2. INTERFACES Y DATOS
@@ -138,7 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setupContactForm();
 
     // F. Configurar la parte de la parte selectora de videos
-    setupVideoPlatformSelector();
+    setupIframeButtons();
+
 
 
     // Listener para botón Donar

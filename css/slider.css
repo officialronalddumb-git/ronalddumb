@@ -1,0 +1,79 @@
+.slider {
+  position: relative;
+  max-width: 900px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  background-color: var(--white);
+}
+
+.slide {
+  display: none;
+  position: relative;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide-image { 
+  max-height: 400px; /* límite de altura */ 
+  width: auto; /* el ancho se ajusta automáticamente */ 
+  display: block; margin: 0 auto; /* centra la imagen si no ocupa todo el ancho */ 
+  object-fit: contain; /* mantiene proporción sin recortar */
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.slide-text {
+  padding: 20px 30px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.slide-text .category {
+  font-size: 0.9em;
+  color: var(--primary-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.slide-text h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.8em;
+  margin: 10px 0;
+  color: var(--dark-text);
+}
+
+.slide-text h2 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.slide-text p {
+  font-size: 1.1em;
+  color: #444;
+  margin-top: 10px;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.2em;
+}
+
+button.prev { left: 15px; }
+button.next { right: 15px; }
+
+.slide-text h2 a:hover {
+  color: var(--accent-green);   /* tu verde definido en la paleta */
+  text-decoration: underline;   /* opcional, refuerza que es un link */
+  transition: color 0.3s ease;  /* hace el cambio suave */
+}
